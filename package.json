@@ -61,6 +61,16 @@
       },
       {
         "injectTo": [
+          "source.dart"
+        ],
+        "scopeName": "inline.dart.graphql",
+        "path": "./grammars/graphql.dart.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.graphql": "graphql"
+        }
+      },
+      {
+        "injectTo": [
           "source.js",
           "source.ts",
           "source.js.jsx",

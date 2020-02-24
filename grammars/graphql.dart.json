@@ -1,0 +1,23 @@
+{
+  "fileTypes": ["dart"],
+  "injectionSelector": "L:source -string -comment",
+  "patterns": [
+    {
+      "contentName": "meta.embedded.block.graphql",
+      "begin": "\\s*+@gql\\(\\s*(r\"\"\")",
+      "beginCaptures": {
+        "0": {
+          "name": "string.quoted.triple.double.dart"
+        }
+      },
+      "end": "\"\"\"\\)",
+      "endCaptures": {
+        "0": {
+          "name": "string.quoted.triple.double.end.dart"
+        }
+      },
+      "patterns": [{ "include": "source.graphql" }]
+    }
+  ],
+  "scopeName": "inline.dart.graphql"
+}

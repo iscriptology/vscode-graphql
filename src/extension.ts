@@ -89,9 +89,10 @@ export async function activate(context: ExtensionContext) {
     documentSelector: [
       { scheme: "file", language: "graphql" },
       { scheme: "file", language: "javascript" },
+      { scheme: "file", language: "dart" },
     ],
     synchronize: {
-      fileEvents: workspace.createFileSystemWatcher("**/*.{graphql,gql,js}"),
+      fileEvents: workspace.createFileSystemWatcher("**/*.{graphql,gql,js,dart}"),
     },
     outputChannel: outputChannel,
     outputChannelName: "GraphQL Language Server",
@@ -133,6 +134,7 @@ export async function activate(context: ExtensionContext) {
         "javascriptreact",
         "typescriptreact",
         "graphql",
+        "dart",
       ],
       new GraphQLCodeLensProvider(outputChannel),
     ),
